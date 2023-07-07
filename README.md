@@ -5,13 +5,13 @@ Implementação de um socket TCP para realizar uma batalha naval entre cliente-s
 
 Protocolo da Camada de Aplicação para o Jogo de Batalha Naval:
 
-1. Estabelecimento da Conexão:
+# 1. Estabelecimento da Conexão:
    - O cliente inicia a conexão com o servidor através do socket TCP.
    - O cliente envia uma mensagem "StartConnection" para o servidor, contendo o nickname do cliente.
    - O servidor recebe a mensagem, cria uma nova instância de cliente e inicia o jogo.
    - O servidor envia uma mensagem "StartGame" para o cliente, indicando que o jogo começou.
 
-2. Fase de Jogo:
+# 2. Fase de Jogo:
    - Durante a fase de jogo, o cliente e o servidor se alternam realizando ações no jogo.
 
    - Ações do Cliente:
@@ -25,7 +25,7 @@ Protocolo da Camada de Aplicação para o Jogo de Batalha Naval:
      - O servidor envia uma mensagem "HIT x,y" para o cliente, informando que acertou um navio do cliente.
        (ou envia "MISS" se o tiro não acertou nenhum navio)
 
-3. Atualização do Estado:
+# 3. Atualização do Estado:
    - Após cada ação de tiro, o estado do jogo é atualizado e os tabuleiros são exibidos.
 
    - Cliente:
@@ -36,7 +36,7 @@ Protocolo da Camada de Aplicação para o Jogo de Batalha Naval:
      - O servidor atualiza o tabuleiro do cliente com os resultados dos tiros do cliente.
      - O servidor exibe seu tabuleiro e o tabuleiro do cliente.
 
-4. Finalização do Jogo:
+# 4. Finalização do Jogo:
    - O jogo continua até que todas as embarcações de um dos jogadores sejam destruídas.
 
    - Cliente:
@@ -48,11 +48,11 @@ Protocolo da Camada de Aplicação para o Jogo de Batalha Naval:
      - Se todas as embarcações do servidor forem destruídas, o servidor encerra a conexão com o cliente.
      - O servidor exibe a mensagem de derrota e aguarda por novas conexões.
 
-5. Encerramento da Conexão:
+# 5. Encerramento da Conexão:
    - Em qualquer momento durante o jogo, se ocorrer um erro ou o cliente encerrar a conexão, o servidor fecha a conexão com o cliente.
    - O servidor exibe a mensagem de desconexão do cliente e continua aguardando por novas conexões.
 
-Mensagens Trocadas:
+# Mensagens Trocadas:
 - Cliente para Servidor:
   - "StartConnection Nick" - Solicita o estabelecimento da conexão com o servidor, fornecendo o apelido do cliente.
   - "SHOT x,y" - Informa ao servidor a posição do tiro realizado pelo cliente.
