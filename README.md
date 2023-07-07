@@ -3,7 +3,7 @@ Programação de um socket TCP.
 
 Implementação de um socket TCP para realizar uma batalha naval entre cliente-servidor.
 
-Protocolo da Camada de Aplicação para o Jogo de Batalha Naval:
+## Protocolo da Camada de Aplicação para o Jogo de Batalha Naval:
 
 ## 1. Estabelecimento da Conexão:
    - O cliente inicia a conexão com o servidor através do socket TCP.
